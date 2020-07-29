@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.mainHeader {
+  height: 80vh;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.headerLogo {
+  position: absolute;
+  top: 0px;
+  height: 65px;
+  width: 180px;
+  margin: 15px 280px;
+}
+
+.desktopMenu {
+  height: 65px;
+  width: 550px;
+  color: #ffffff;
+  position: absolute;
+  top: 15px;
+  right: 280px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+
