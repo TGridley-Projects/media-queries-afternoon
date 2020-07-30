@@ -6,8 +6,14 @@ class App extends Component {
     super()
 
     this.state = {
-      dropDownVisible: false,
+      dropDownVisible: false
     }
+  }
+
+  toggleDropDown = () => {
+    this.setState({
+      dropDownVisible: !this.state.dropDownVisible
+    })
   }
   
   
@@ -16,7 +22,6 @@ class App extends Component {
       <div className="app">
         <div className="mainHeader">
           <img className="headerLogo" src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg"/>
-          <img className="bgImage" src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg"/>
           <nav className="desktopMenu">
             <span>SERVICES</span>
             <span>PORTFOLIO</span>
@@ -24,6 +29,16 @@ class App extends Component {
             <span>TEAM</span>
             <span>CONTACT</span>
           </nav>
+          <div className="dropDown" onClick={this.toggleDropDown}>MENU &#9776;</div>
+          {this.state.dropDownVisible ? (
+            <nav className="mobileMenu">
+              <span>SERVICES</span>
+              <span>PORTFOLIO</span>
+              <span>ABOUT</span>
+              <span>TEAM</span>
+              <span>CONTACT</span>
+          </nav>
+          ) : null}
         </div>  
       </div>  
     )  
